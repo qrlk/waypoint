@@ -30,8 +30,8 @@ function main()
   sampRegisterChatCommand("waypointkey", function() lua_thread.create(changehotkey) end)
   while true do
     wait(0)
-    if sampIsDialogActive() == false and not isPauseMenuActive() and isPlayerPlaying(playerHandle) and sampIsChatInputActive() == false and wasKeyPressed(settings.waypoint.key) and kvadX ~= nil and kvadY ~= nil and type(kvadX) == "number" and type(kvadY) == "number" and tonumber(kvadX) < 25 and tonumber(kvadX) > 0 then
-      if coordX ~= nil and coordY ~= nil then
+    if sampIsDialogActive() == false and not isPauseMenuActive() and isPlayerPlaying(PLAYER_PED) and sampIsChatInputActive() == false and wasKeyPressed(settings.waypoint.key) then
+      if kvadX ~= nil and kvadY ~= nil and kvadrat(string.rlower(kvadY)) ~= nil and tonumber(kvadX) < 25 and tonumber(kvadX) > 0  and coordX ~= nil and coordY ~= nil then
         cX, cY, cZ = getCharCoordinates(playerPed)
         cX = math.ceil(cX)
         cY = math.ceil(cY)
@@ -71,15 +71,15 @@ function RPC.onServerMessage(color, lcs)
   if string.find(lcs, "(%S)%-[0-9][0-9]") or string.find(lcs, "(%S)%-[0-9]") or string.find(lcs, "(%S)[0-9][0-9]") or string.find(lcs, "(%S)[0-9]") or string.find(lcs, "(%S)% [0-9][0-9]") or string.find(lcs, "(%S)% [0-9]") then
     if string.find(lcs, "(%S)%-[0-9][0-9]") or string.find(lcs, "(%S)%-[0-9]") then
       if tonumber(string.match(lcs, "%S%-(%d+)")) < 25 and tonumber(string.match(lcs, "%S%-(%d+)")) > 0 then
-        kvadX, kvadY = string.match(lcs, "(%S)%-(%d+)")
+        kvadY, kvadX = string.match(lcs, "(%S)%-(%d+)")
       end
     elseif string.find(lcs, "(%S)[0-9][0-9]") or string.find(lcs, "(%S)[0-9]") then
       if tonumber(string.match(lcs, "%S(%d+)")) < 25 and tonumber(string.match(lcs, "%S(%d+)")) > 0 then
-        kvadX, kvadY = string.match(lcs, "(%S)(%d+)")
+        kvadY, kvadX = string.match(lcs, "(%S)(%d+)")
       end
     elseif string.find(lcs, "(%S)% [0-9][0-9]") or string.find(lcs, "(%S)% [0-9]") then
       if tonumber(string.match(lcs, "%S% (%d+)")) < 25 and tonumber(string.match(lcs, "%S% (%d+)")) > 0 then
-        kvadX, kvadY = string.match(lcs, "(%S)% (%d+)")
+        kvadY, kvadX = string.match(lcs, "(%S)% (%d+)")
       end
     end
     if kvadX ~= nil and kvadY ~= nil and kvadrat(string.rlower(kvadY)) ~= nil and tonumber(kvadX) < 25 and tonumber(kvadX) > 0 then
