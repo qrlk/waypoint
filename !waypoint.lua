@@ -3,7 +3,7 @@
 -------------------------------------META---------------------------------------
 --------------------------------------------------------------------------------
 script_name("waypoint")
-script_version("05.07.2019")
+script_version("05.07.2019-1")
 script_author("qrlk")
 script_description("Z - set waypoint")
 script_url("http://qrlk.me/samp/waypoint")
@@ -24,7 +24,7 @@ local settings = inicfg.load({
 function main()
   if not isSampfuncsLoaded() then return end
   while not isSampAvailable() do wait(100) end
-  update("http://qrlk.me/dev/moonloader/waypoint/stats.php", '['..string.upper(thisScript().name)..']: ', "http://qrlk.me/sampvk", "watchangelog")
+  update("http://qrlk.me/dev/moonloader/waypoint/stats.php", '['..string.upper(thisScript().name)..']: ', "http://qrlk.me/sampvk", "waypointchangelog")
   openchangelog("waypointchangelog", "http://qrlk.me/changelog/waypoint")
   sampAddChatMessage("WAYPOINT v"..thisScript().version.." loaded! /waypointkey - change hotkey ({FFFFFF}"..key.id_to_name(settings.waypoint.key).."{348cb2}). <> by qrlk.", 0x348cb2)
   sampRegisterChatCommand("waypointkey", function() lua_thread.create(changehotkey) end)
