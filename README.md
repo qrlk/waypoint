@@ -30,7 +30,7 @@ It also requires **[CLEO 4+](http://cleo.li/?lang=ru)**, **[SAMPFUNCS 5+](https:
 **Требования:** [CLEO 4+](http://cleo.li/?lang=ru), [SAMPFUNCS 5.3.3](https://blast.hk/threads/17/), [MoonLoader](https://blast.hk/threads/13305/), [SAMP.Lua](https://blast.hk/threads/14624/).  
 
 ## Ссылки
-* [qrlk](http://qrlk.me/)
+* [Автор](http://qrlk.me/)
 * [Авторский обзор](https://www.youtube.com/watch?v=A5kvH2gYzEw)
 * [Тема на BlastHack](https://www.blast.hk/threads/22964/#post-230059)
 * [Страница в группе VK](https://vk.com/qrlk.mods?w=page-168860334_54271677)
