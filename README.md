@@ -23,7 +23,9 @@ It also requires **[CLEO 4+](http://cleo.li/?lang=ru)**, **[SAMPFUNCS 5+](https:
 ---
 
 **The following description is in Russian, because it is the main language of the user base**.
-
+<details>
+  <summary>Описание на русском языке.</summary>
+  
 ## Описание 
 Нажимаешь Z -> скрипт берёт самый последний квадрат из чата -> ставит на него нативную метку.  
 
@@ -37,3 +39,4 @@ It also requires **[CLEO 4+](http://cleo.li/?lang=ru)**, **[SAMPFUNCS 5+](https:
 * [Список скриптов QRLK MODS](https://vk.com/qrlk.mods?w=page-168860334_54271482)
 
 P.S. Группа VK не обновляется.
+</details>
