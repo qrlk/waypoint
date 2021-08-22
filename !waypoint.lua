@@ -6,7 +6,7 @@ script_name("waypoint")
 script_version("05.07.2019-1")
 script_author("qrlk")
 script_description("Z - set waypoint")
-script_url("http://qrlk.me/samp/waypoint")
+script_url("https://github.com/qrlk/waypoint")
 
 RPC = require 'lib.samp.events'
 
